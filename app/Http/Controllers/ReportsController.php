@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 class ReportsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     public function index()
     {
         //$posts = App\Post::has('comments')->get();

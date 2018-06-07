@@ -17,6 +17,10 @@ class EntryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
     public function index()
     {
         $entries = Entry::orderBy('id','DESC')->paginate(10);
