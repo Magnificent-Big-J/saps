@@ -85,9 +85,9 @@
                         </div>
                            <div class="row">
                                <div class="col">
-                                   <div class="form-group">
+                                   <div class="form-group">is-invali
                                        <label for="vin">VIN Number</label>
-                                       <input type="text" class="form-control" :class="{'is-invalid':errors.vin_number}" name="vin_number" v-model="list.vin_number">
+                                       <input type="text" class="form-control" :class="{'d':errors.vin_number}" name="vin_number" v-model="list.vin_number">
                                        <small class="text-danger"  v-if="errors.vin_number"  >{{errors.vin_number[0]}}</small>
                                    </div>
                                    <div class="form-group">
@@ -175,7 +175,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" >
                             <img class="card-img-top" v-if="isImage(info.image)" :src="urlImage">
                             <p v-else>{{info.number_plate}}</p>
                             <div class="card-body">

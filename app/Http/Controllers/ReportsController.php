@@ -15,7 +15,7 @@ class ReportsController extends Controller
         //$reports = Circulation::has('reports')->paginate(10);
         $reports = DB::table('circulations')
                 ->join('reports','reports.circulation_id','=','circulations.id')
-                ->select('circulations.number_plate','circulations.vin_number','circulations.model','reports.status','reports.created_at','circulations.engine_number')
+                ->select('circulations.colour','circulations.owner_name','circulations.owner_name','circulations.image','circulations.number_plate','circulations.vin_number','circulations.model','reports.status','reports.created_at','circulations.engine_number')
                 ->get();
 
 
